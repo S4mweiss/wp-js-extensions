@@ -22,10 +22,12 @@ var myNewsLoader = new NewsLoader(simultaniouslyLoad, ajaxPhpScript); //Create n
 #### .fillPage()
 Loads new Posts from server until either no further posts are available or the document height exceeds the window height.
 
-Arguments:
+**Arguments:**
+
 *No arguments*
 
-Usage:
+**Usage:**
+
 ```javascript
 //Fill the page with news posts
 var myNewsLoader = new NewsLoader(); //Create new instance of NewsLoader with default values;
@@ -35,12 +37,14 @@ myNewsLoader.fillPage(); //Get the posts;
 #### .getNextPosts()
 Loads next news posts if available. The amount of posts loaded by this method depends on the argument *simultaniouslyLoadedPosts* that was forwardet to the constructor.
 
-Arguments:
+**Arguments:**
+
 Name       | Description 
 -----------|------------
 callback (optional) | A function that should be called after the server's response has been successfully processed.
 
-Usage:
+**Usage:**
+
 ```javascript
 //Load 5 posts from the server
 var simultaniouslyLoad = 4; //Set number of posts to 4
@@ -51,10 +55,12 @@ myNewsLoader.getNextPosts(); //Get the posts;
 #### .hasMore()
 Indicates, wether or not there are more posts that can be loaded from the server. Returns `true`, if more posts are available, and `false` in any other case.
 
-Arguments:
+**Arguments:**
+
 *No arguments*
 
-Usage:
+**Usage:**
+
 ```javascript
 //Load 5 posts from the server
 var myNewsLoader = new NewsLoader(); //Create new instance of NewsLoader with default values;
@@ -70,10 +76,12 @@ if(myNewsLoader.hasMore()){
 #### .lazyLoad()
 Loads more posts, if the website is scrolled to the bottom at the moment. This method can be called whenever the scroll event fires.
 
-Arguments:
+**Arguments:**
+
 *No arguments*
 
-Usage:
+**Usage:**
+
 ```javascript
 //Load some more posts whenever the user has scrolled to the bottom (lazy loading)
 var myNewsLoader = new NewsLoader(); //Create new instance of NewsLoader with default values;
