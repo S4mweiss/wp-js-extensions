@@ -3,7 +3,7 @@
     This function handles AJAX based loading of news posts from Wordpress.
 */
 var NewsLoader = function (simultaniouslyLoadedPosts, ajaxDestination) {
-    var postsTotal;                                 //Die Anzahl aller verfügbaren Posts
+    var postsTotal;                                 //The number of posts totaly available on the server
     var postsPerPage;                               //The number of posts loaded at once
     var lastPageID;                                 //Number of the last loaded news page
     var ajaxUrl;                                    //The script on the server which handles ajax requests
@@ -11,8 +11,8 @@ var NewsLoader = function (simultaniouslyLoadedPosts, ajaxDestination) {
     var self;                                       //Reference to itself
 
     //-----------------Constructor part-----------------
-    postsPerPage = typeof (simultaniouslyLoadedPosts) !== 'undefined' ? simultaniouslyLoadedPosts : 2;     //Assign the number of posts loaded at once, default value = 2
-    ajaxUrl = typeof (ajaxDestination) !== 'undefined' ? ajaxDestination : '../wp-admin/admin-ajax.php';
+    postsPerPage = typeof (simultaniouslyLoadedPosts) !== 'undefined' ? simultaniouslyLoadedPosts : 2;      //Assign the number of posts loaded at once, default value = 2
+    ajaxUrl = typeof (ajaxDestination) !== 'undefined' ? ajaxDestination : '../wp-admin/admin-ajax.php';    //Assing the destination for ajax requests, default value = '../wp-admin/admin-ajax.php'
     postsTotal = 1;
     lastPageID = 0;
     working = false;
